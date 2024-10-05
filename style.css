@@ -91,6 +91,7 @@ video {
     vertical-align: baseline;
     margin: 0;
     padding: 0;
+
 }
 
 article,
@@ -1957,4 +1958,223 @@ body {
     .zoom-close .scale-d #solar-system {
         margin-left: -120%;
     }
+}
+
+.sunpop {
+    display: none;
+    /* Hide popover by default */
+    position: absolute;
+    top: 25px;
+    /* Adjust based on your needs */
+    left: 0;
+    width: 150px;
+    /* Set width */
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the anchor and popover */
+.popover-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Show popover when hovering over the container */
+.popover-container:hover .sunpop,
+.popover-container:focus-within .sunpop {
+    display: block;
+    /* Show popover on hover or focus */
+}
+
+/* Basic styling for the anchor */
+a.sun {
+    cursor: pointer;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a.sun:hover {
+    text-decoration: underline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    color: whitesmoke;
+}
+
+/* Card Container */
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(4, 13, 21);
+    z-index: 20;
+    visibility: hidden;
+    /* Initially hidden */
+    filter: none;
+    opacity: 0;
+    /* Set initial opacity to 0 for fade-in effect */
+
+    /* Combined transition properties */
+    transition: visibility 0s, opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card Image */
+.card-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    animation-name: spin;
+    animation-duration: 100000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: whitesmoke;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 14px;
+
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(20, 37, 52);
+}
+
+.card-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff9800;
+
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-btn:hover {
+    background-color: #e68900;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dis-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dis {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.cir-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.circum {
+    font-size: 20px;
+}
+
+.foot {
+    height: 190px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more {
+    background-color: rgb(249, 154, 38);
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid rgb(249, 154, 38);
+    border-radius: 30px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.more:hover {
+    background-color: #ff9900;
+    border: none;
+}
+
+.speed-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speed {
+    font-size: 20px;
+}
+
+.cards-container {
+    height: 600px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
