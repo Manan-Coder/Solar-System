@@ -40,3 +40,109 @@ $(window).load(function () {
     init();
 
 });
+
+
+const sun = document.getElementById("sun-text")
+const suncard = document.getElementById("sun-card")
+const universe = document.getElementById("universe")
+const mercury = document.getElementById("mercury-text")
+const mercurycard = document.getElementById("merc-card")
+const venuscard = document.getElementById("venus-card")
+const venus = document.getElementById("venus-text")
+const earthcard = document.getElementById("earth-card")
+const earth = document.getElementById("earth-text")
+sun.addEventListener('click', () => {
+    event.preventDefault();
+    suncard.style.visibility = "visible"
+    universe.style.filter = "blur(5px)"
+    suncard.style.opacity = "1"
+    mercurycard.style.opacity = "0"
+    setTimeout(() => {
+        mercurycard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    venuscard.style.opacity = "0"
+    setTimeout(() => {
+        venuscard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    earthcard.style.opacity = "0"
+    setTimeout(() => {
+        earthcard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+})
+
+universe.addEventListener('click', () => {
+    event.preventDefault()
+    universe.style.filter = "none"
+    suncard.style.opacity = "0"
+    mercurycard.style.opacity = "0"
+    setTimeout(() => {
+        suncard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    setTimeout(() => {
+        mercurycard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    venuscard.style.opacity = "0"
+    setTimeout(() => {
+        venuscard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    earthcard.style.opacity = "0"
+    setTimeout(() => {
+        earthcard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+})
+mercury.addEventListener('click', () => {
+    event.preventDefault();
+    mercurycard.style.visibility = "visible"
+    universe.style.filter = "blur(5px)"
+    mercurycard.style.opacity = "1"
+    suncard.style.opacity = "0"
+    setTimeout(() => {
+        suncard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    venuscard.style.opacity = "0"
+    setTimeout(() => {
+        venuscard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    earthcard.style.opacity = "0"
+    setTimeout(() => {
+        earthcard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+})
+
+venus.addEventListener('click', () => {
+    console.log("clicked")
+    venuscard.style.visibility = "visible"
+    universe.style.filter = "blur(5px)"
+    venuscard.style.opacity = "1"
+    suncard.style.opacity = "0"
+    setTimeout(() => {
+        suncard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    mercurycard.style.opacity = "0"
+    setTimeout(() => {
+        mercurycard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    earthcard.style.opacity = "0"
+    setTimeout(() => {
+        earthcard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+})
+
+earth.addEventListener('click', () => {
+    console.log("clicked")
+    earthcard.style.visibility = "visible"
+    universe.style.filter = "blur(5px)"
+    earthcard.style.opacity = "1"
+    suncard.style.opacity = "0"
+    setTimeout(() => {
+        suncard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    mercurycard.style.opacity = "0"
+    setTimeout(() => {
+        mercurycard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+    venuscard.style.opacity = "0"
+    setTimeout(() => {
+        venuscard.style.visibility = "hidden"; // Hide it after animation ends
+    }, 500);
+})
