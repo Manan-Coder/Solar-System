@@ -3,6 +3,7 @@
 </head>
 
 <body class="opening hide-UI view-2D zoom-large data-close controls-close">
+
     <div id="navbar">
         <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
         <h1>3D Solar System<br><span>by <a href="https://twitter.com/MananCoder" target="_blank">@MananCoder</a></span>
@@ -10,10 +11,10 @@
         <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
     </div>
     <div id="data">
-        <a class="sun" title="sun" href="#sunspeed">Sun</a>
-        <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
-        <a class="venus" title="venus" href="#venusspeed">Venus</a>
-        <a class="earth active" title="earth" href="#earthspeed">Earth</a>
+        <a class="sun" title="sun" href="#sunspeed" id="sun-text">Sun</a>
+        <a class="mercury" title="mercury" href="#mercuryspeed" id="mercury-text">Mercury</a>
+        <a class="venus" title="venus" href="#venusspeed" id="venus-text">Venus</a>
+        <a class="earth active" title="earth" href="#earthspeed" id="earth-text">Earth</a>
         <a class="mars" title="mars" href="#marsspeed">Mars</a>
         <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
         <a class="saturn" title="saturn" href="#saturnspeed">Saturn</a>
@@ -138,6 +139,121 @@
             </div>
         </div>
     </div>
+
+    </div>
+    <div class="cards-container">
+        <!-- Sun Card -->
+        <div class="card" id="sun-card">
+            <div class="card-image">
+                <img src="images/sun.png" alt="Sun">
+            </div>
+            <div class="card-content">
+                <h2>Sun</h2>
+                <p>The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma,
+                    radiating light and heat.<br></p>
+                <div class="dis-container">
+                    <div class="dis">
+                        Distance from Earth : 149.62 million km
+                    </div>
+                </div>
+                <div class="cir-container">
+                    <div class="circum">Equatorial Circumference : 4.37 million km</div>
+                </div>
+            </div>
+            <footer class="foot">
+                <a href="https://en.wikipedia.org/wiki/Sun">
+                    <button class="more">Explore More</button></a>
+            </footer>
+        </div>
+
+        <!-- Mercury Card -->
+        <div class="card" id="merc-card">
+            <div class="card-image">
+                <img src="images/mercury.png" alt="Mercury">
+            </div>
+            <div class="card-content">
+                <h2>Mercury</h2>
+                <p>Mercury is the smallest planet of the Solar System, it is also the closest planet to the Sun.<br></p>
+                <div class="dis-container">
+                    <div class="dis">
+                        Distance from The Sun : 57.9 million km
+                    </div>
+                </div>
+                <div class="cir-container">
+                    <div class="circum">Equatorial Circumference : 15,329 km
+                    </div>
+                </div>
+                <div class="speed-container">
+                    <div class="speed">Orbit Speed: 170,503 km/h
+                    </div>
+                </div>
+                <footer class="foot">
+                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">
+                        <button class="more">Explore More</button></a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Venus Card (Moved Outside Mercury Card) -->
+        <div class="card" id="venus-card">
+            <div class="card-image">
+                <img src="images/venus.png" alt="Venus">
+            </div>
+            <div class="card-content">
+                <h2>Venus</h2>
+                <p>Venus is the second planet from the Sun. It is also called Earth's twin and Evening/Morning
+                    Star.<br></p>
+                <div class="dis-container">
+                    <div class="dis">
+                        Distance from The Sun : 108.2 million km
+                    </div>
+                </div>
+                <div class="cir-container">
+                    <div class="circum">Equatorial Circumference : 38,024 km
+                    </div>
+                </div>
+                <div class="speed-container">
+                    <div class="speed">Orbit Speed: 126,074 km/h
+                    </div>
+                </div>
+                <footer class="foot">
+                    <a href="https://en.wikipedia.org/wiki/Venus">
+                        <button class="more">Explore More</button></a>
+                </footer>
+            </div>
+        </div>
+
+
+        <div class="card" id="earth-card">
+            <div class="card-image">
+                <img src="images/earth.png" alt="Earth">
+            </div>
+            <div class="card-content">
+                <h2>Earth</h2>
+                <p>Earth is the third planet from the Sun. It is the only known planet with life.<br></p>
+                <div class="dis-container">
+                    <div class="dis">
+                        Distance from The Sun : 149.59 million km
+                    </div>
+                </div>
+                <div class="cir-container">
+                    <div class="circum">Equatorial Circumference : 40,075 km
+                    </div>
+                </div>
+                <div class="speed-container">
+                    <div class="speed">Orbit Speed: 107,218 km/h
+                    </div>
+                </div>
+                <footer class="foot">
+                    <a href="https://en.wikipedia.org/wiki/Earth">
+                        <button class="more">Explore More</button></a>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script type="text/javascript">
         if (typeof jQuery == 'undefined') {
@@ -147,4 +263,5 @@
     <script src="js/prefixfree.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="script.js"></script>
+
 </body>
